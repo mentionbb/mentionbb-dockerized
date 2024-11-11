@@ -49,7 +49,7 @@ This command-line interface download and install latest MentionBB release.
   - Password: `sfx`
 - Go to sf db and Import `sf.sql`
 - Connect tunnel and run `composer update`
-  - Or extract the vendor.zip in `src` folder.
+  - Or extract the src/vendor.zip in same directory.
 - Open `https://local.dev.com/` and enjoy!
 
 ### More information about the installer: https://github.com/mentionbb/mentionbb?tab=readme-ov-file#install
