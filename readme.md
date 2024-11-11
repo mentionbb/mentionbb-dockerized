@@ -29,6 +29,7 @@
 - Clone this repo or download.
 - Run `docker compose up --build -d`
 - Start `winsetup.ps1` on PowerShell.
+- All files download and extracted to www folder.
 
 This command-line interface download and install latest MentionBB release.
 
@@ -38,7 +39,7 @@ This command-line interface download and install latest MentionBB release.
 ## Setup Via Zip
 - Clone this Repo or Download.
 - Run `docker compose up --build -d`
-- [Download the latest MentionBB files](https://github.com/mentionbb/mentionbb/releases/latest) and download and extract it to the same directory as docker-compose.yml.
+- [Download the latest MentionBB files](https://github.com/mentionbb/mentionbb/releases/latest) and download and extract it to the www folder.
 
 *For both installations, all files must be in `www` folder.
 
