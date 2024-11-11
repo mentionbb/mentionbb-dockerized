@@ -35,11 +35,12 @@ This command-line interface download and install latest MentionBB release.
 ### If PowerShell gives an unauthorized error, use the following command and run it again.
 `Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser`
 
-
 ## Setup Via Zip
 - Clone this Repo or Download.
 - Run `docker compose up --build -d`
 - [Download the latest MentionBB files](https://github.com/mentionbb/mentionbb/releases/latest) and download and extract it to the same directory as docker-compose.yml.
+
+*For both installations, all files must be in `www` folder.
 
 ## Install MentionBB
 - Open `https://local.dev.com:8090`
