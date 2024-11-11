@@ -1,0 +1,12 @@
+services:
+  phpmyadmin:
+    depends_on:
+      - db
+    image: phpmyadmin
+    ports:
+      - "8090:80"
+    environment:
+      PMA_HOST: db
+      PMA_PORT: 3306
+    networks:
+      - mention_app

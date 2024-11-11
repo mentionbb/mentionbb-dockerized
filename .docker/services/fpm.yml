@@ -1,0 +1,27 @@
+services:
+  php:
+    build:
+      context: ../php
+      args:
+        TIMEZONE: ${TIMEZONE}
+        PHP_VERSION: ${PHP_VERSION}
+        SERVER: ${SERVER}
+    volumes:
+      - ../../${WWW_PATH}:/var/www/html
+    networks:
+      - mention_app
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+  nginx:
+    build:
+      context: ../nginx
+    volumes:
+      - ../../${WWW_PATH}:/var/www/html
+      - ../nginx/certs:/etc/nginx/ssl
+    ports:
+      - 80:80
+      - 443:443
+    networks:
+      - mention_app
+    env_file:
+      - ../.env.nginx.local

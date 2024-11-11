@@ -1,0 +1,13 @@
+services:
+  mkdocs:
+    build: ../mkdocs
+    ports:
+      - 7865:8000
+    volumes:
+      - ../../docs2www/:/root
+    command:
+      - "mkdocs"
+      - "serve"
+      - "--dev-addr=0.0.0.0:8000"
+      - "--config-file"
+      - "./mkdocs.yml"

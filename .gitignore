@@ -1,0 +1,5 @@
+.devcontainer
+.docker/.mysql
+dev2assets
+dev2www
+docs2www
