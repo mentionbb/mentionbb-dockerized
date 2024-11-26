@@ -20,7 +20,7 @@ Remove-Item $dd -Force -Recurse
 Set-Location -Path $wwwPath
 
 Write-Host Applied vendor files..
-Expand-Archive vendor.zip -Force
+Expand-Archive src\vendor.zip -Force
 Copy-Item vendor\* -Destination "src\vendor" -Force -Recurse -Verbose
 
 Remove-Item vendor -Force -Recurse
