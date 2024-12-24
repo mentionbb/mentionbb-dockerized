@@ -24,16 +24,18 @@ RUN apt-get update && apt-get install -y \
     libfreetype6-dev \
     libpng-dev \
     libjpeg-dev \
+    libwebp-dev \
+    libavif-dev \
     libicu-dev  \
     libonig-dev \
     libxslt1-dev \
     acl \
     && echo 'alias sf="php bin/console"' >> ~/.bashrc
 
-RUN docker-php-ext-configure gd --with-jpeg --with-freetype 
+RUN docker-php-ext-configure gd --with-jpeg --with-freetype --with-webp --with-avif
 
 RUN docker-php-ext-install \
-    pdo pdo_mysql zip xsl gd intl opcache exif mbstring gd
+    pdo pdo_mysql zip xsl gd intl opcache exif mbstring
 
 # Set timezone
 RUN ln -snf /usr/share/zoneinfo/${TIMEZONE} /etc/localtime && echo ${TIMEZONE} > /etc/timezone \
